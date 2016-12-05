@@ -35,4 +35,8 @@ with `access()` and the code to find the path of the user's home directory
 Windows for use with XMing (a Win32 X11 server). I tried to avoid any
 external libraries where possible, so it is highly portable.
 
-To compile, run `./compile.sh` from the root of the repository.
+To compile, run `make` from the root of the repository.
+
+For posterity and flexibility (who knows, maybe someone doesn't have `make`!)
+I am leaving the old `compile.sh`, but you should really use the makefile
+instead.
