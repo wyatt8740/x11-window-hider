@@ -8,16 +8,23 @@ hadn't been done yet, I 'ported' the shell scripts into K&R C.
 I recommend binding these programs to keyboard shortcuts, as they operate on
 whichever window currently has focus.
 
-The Shell Scripts:
+## The Shell Scripts:
 These are what you should use if you have `xdotool` and `bash` and GNU `sed`.
 The hiding script doesn't require any of those but `xdotool`, but the unhiding
 script requires `bash` and GNU `sed`. You can probably replace those with other
 tools or options in exotic linuxes/unixes, but I was targeting my personal
 Debian machine.
 
+
+## C programs:
 If you want something that will work on basically any POSIX OS, try the C
 programs. You only need libxcb's headers and library for them to work.
 
+(Update: 2017: for some reason, the C programs don't work on my laptop with
+Intel graphics. I'm probably doing something wrong with the X11 protocol.
+The shell scripts still work fine, so I recommend using those. I have no
+idea exactly why the C programs broke, and I don't have time to mess with them
+at the moment.)
 
 The C Programs:
 I chose K&R C because I happened to have a book written in 1989 on C
@@ -35,8 +42,4 @@ with `access()` and the code to find the path of the user's home directory
 Windows for use with XMing (a Win32 X11 server). I tried to avoid any
 external libraries where possible, so it is highly portable.
 
-To compile, run `make` from the root of the repository.
-
-For posterity and flexibility (who knows, maybe someone doesn't have `make`!)
-I am leaving the old `compile.sh`, but you should really use the makefile
-instead.
+To compile, run `./compile.sh` from the root of the repository.
