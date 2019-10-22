@@ -20,8 +20,11 @@ Debian machine.
 If you want something that will work on basically any POSIX OS, try the C
 programs. You only need libxcb's headers and library for them to work.
 
-(Update: 2017: for some reason, the C programs don't work on my laptop with
-Intel graphics. I'm probably doing something wrong with the X11 protocol.
+(Update: 2017: for some reason, the C programs don't work on my 64 bitlaptop
+with Intel graphics. I'm probably doing something wrong with the X11 protocol
+or making bad assumptions. It was an early C program I wrote, just to try to
+do it, so I'm not too concerned with fixing it right now.
+
 The shell scripts still work fine, so I recommend using those. I have no
 idea exactly why the C programs broke, and I don't have time to mess with them
 at the moment.)
